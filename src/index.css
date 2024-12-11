@@ -1,0 +1,322 @@
+/*#region Variables, Reset, General & Body ----------------------------------------------------- */
+
+:root {
+  --primary-dark-color: #4c2b36;
+  --primary-light-color: #fcfcfc;
+  --body-color: #bd899b;
+  --easy-color: #08f1a0;
+  --medium-color: #f3c178;
+  --hard-color: #fe5e41;
+}
+
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.difficulty {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.difficulty-easy {
+  background-color: var(--easy-color);
+  color: #8d6346;
+}
+
+.difficulty-medium {
+  background-color: var(--medium-color);
+  color: #8d6346;
+}
+
+.difficulty-hard {
+  background-color: var(--hard-color);
+  color: white;
+}
+
+/*#endregion */
+
+/*#region Header ------------------------------------------------------------------------------- */
+
+/* See navbar.css file */
+
+/*#endregion */
+
+/*#region Footer ------------------------------------------------------------------------------- */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  color: var(--primary-light-color);
+  background-color: var(--primary-dark-color);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1em 1em;
+}
+
+footer ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-right: 2.5em;
+}
+
+footer ul li {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  padding-left: 0.5em;
+  border-left: 1px solid white;
+}
+
+footer a {
+  color: var(--primary-light-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+
+/*#endregion */
+
+/*#region Divs --------------------------------------------------------------------------------- */
+
+.container {
+  width: 80%;
+  margin: 0 auto 2em;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+/*#endregion */
+
+/*#region Specific for Settings screen --------------------------------------------------------- */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  margin: 0.5em;
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+  border: 0.5px solid var(--primary-dark-color);
+  border-radius: 5px;
+  outline: none;
+  width: 10em;
+  height: 2.5em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f8ead6;
+}
+
+.btn-selected {
+  background-color: var(--medium-color);
+  color: var(--primary-dark-color);
+}
+
+/*#endregion */
+
+/*#region Specific for Questions screen ----------------------------------------------------------- */
+
+.bg-quiz {
+  background-color: var(--body-color);
+}
+
+.questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  gap: 2rem;
+}
+
+.questions .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  width: 300px;
+  height: 550px;
+  padding: 1em;
+  box-shadow: 10px 10px 30px #0008;
+  background: #8d6346;
+}
+
+.questions .card h2 {
+  font-size: 1.5rem;
+  font-family: 'Playwrite HR Lijeva', cursive;
+  text-transform: uppercase;
+  background-color: var(--primary-light-color);
+  color: #8d6346;
+  margin: 0 auto 1em;
+  padding: 0.1em 0.5em 0.1em;
+}
+
+.questions .card p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.questions .card p.question {
+  font-size: 0.9rem;
+  margin: 1em 1em;
+}
+
+.questions .card p.answer {
+  font-size: 0.9rem;
+  font-weight: normal;
+  background-color: #ddf45b;
+  color: black;
+  font-weight: bold;
+  margin-top: 1.5em;
+  padding: 0.8em 0.5em;
+  width: 80%;
+  cursor: pointer;
+}
+
+.selected-correct {
+  background-color: var(--easy-color) !important;
+  color: var(--primary-dark-color) !important;
+  font-weight: bold;
+}
+
+.selected-incorrect {
+  background-color: var(--hard-color) !important;
+  color: var(--primary-light-color) !important;
+  font-weight: bold;
+}
+
+/*#endregion */
+
+/*#region Specific for About screen ------------------------------------------------------------ */
+
+.about h2 {
+  margin-left: 3rem;
+  font-size: 3rem;
+}
+
+.about p {
+  margin-left: 3rem;
+  width: 50%;
+  text-align: justify;
+  margin-bottom: 3em;
+}
+
+/*#endregion */
+
+/*#region Specific for Error 404 screen -------------------------------------------------------- */
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--primary-dark-color);
+}
+
+/*#endregion */
+
+/*#region Specific for Score Board*/
+
+.score-board {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #a8d4ff;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.score-board button {
+  font-size: 0.8rem;
+  background-color: var(--primary-light-color);
+  cursor: pointer;
+}
+
+.score-board button:hover {
+  background-color: var(--medium-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/*#endregion*/
+
+/*#region Specific for feedback in answers*/
+
+.feedback {
+  font-size: 2rem !important;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  animation: zoomIn 0.5s ease-out;
+}
+
+.feedback-correct {
+  font-family: 'Playwrite HR Lijeva', cursive;
+  color: var(--easy-color);
+  pointer-events: none;
+}
+
+.feedback-incorrect {
+  font-family: 'Playwrite HR Lijeva', cursive;
+  color: var(--hard-color);
+  pointer-events: none;
+}
+
+.explanation {
+  color: var(--primary-light-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*@endregion*/
